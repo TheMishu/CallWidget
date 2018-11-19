@@ -1,0 +1,14 @@
+<div class='wrapper'>
+<div class="header clearfix">
+  Zadzwonimy do Ciebie w ciągu 20 sekund
+</div>
+  <label class="form-label clearfix" for="form-number">
+  TWÓJ NUMER
+  </label>
+<input [(ngModel)]="number" [ngClass]="{ error: !isValidNumber() }" class="form-number clearfix" id="form-number"
+  (keyup)="isValidNumber()" />
+<div class="call-button" (click)="call()" [@pulse]="pulse">
+  Zadzwoń teraz
+</div>
+<p class = "stopka">Mateusz Majcher 2018</p>
+</div>
